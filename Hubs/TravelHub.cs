@@ -8,7 +8,7 @@ public class TravelHub(ILogger<TravelHub> logger) : Hub
 {
     public override async Task OnConnectedAsync()
     {
-        var userId = Context.UserIdentifier;
+        var userId = Context.User?.FindFirst("user_id")?.Value; 
         var connectionId = Context.ConnectionId;
 
         if (string.IsNullOrEmpty(userId))
@@ -22,8 +22,6 @@ public class TravelHub(ILogger<TravelHub> logger) : Hub
         else
         {
             var groupName = $"user_{userId}_travel";
-            
-            // Unir al grupo
             await Groups.AddToGroupAsync(connectionId, groupName);
             
             logger.LogInformation($"🔌 [HUB] Usuario {userId} conectado. Unido al grupo: {groupName}");
@@ -34,7 +32,8 @@ public class TravelHub(ILogger<TravelHub> logger) : Hub
 
     public override async Task OnDisconnectedAsync(Exception? exception)
     {
-        var userId = Context.UserIdentifier;
+        var userId = Context.User?.FindFirst("user_id")?.Value;
+        
         if (!string.IsNullOrEmpty(userId))
         {
             var groupName = $"user_{userId}_travel";
