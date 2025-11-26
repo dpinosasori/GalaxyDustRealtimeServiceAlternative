@@ -10,7 +10,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b00b29f1-af8e-4450-a214-01b6585af6f3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GalaxyDustRealtimeService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GalaxyDustRealtimeService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Handlers/Fleets/FleetLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Handlers/Fleets/FleetLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/FlightControlService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/FlightControlService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +149,7 @@
       <updated>1764162916168</updated>
       <workItem from="1764162917274" duration="7666000" />
       <workItem from="1764172589287" duration="1595000" />
-      <workItem from="1764175043543" duration="869000" />
+      <workItem from="1764175043543" duration="3426000" />
     </task>
     <task id="LOCAL-00001" summary="Added all models from PGSQL">
       <option name="closed" value="true" />
@@ -182,7 +183,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764173569771</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adjusted Channels to long">
+      <option name="closed" value="true" />
+      <created>1764179789829</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764179789829</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adjusted long type for travel">
+      <option name="closed" value="true" />
+      <created>1764180285041</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764180285042</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +213,9 @@
     <MESSAGE value="Adjusted controllers" />
     <MESSAGE value="Adjusted appsettings.json" />
     <MESSAGE value="Adjusted commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted commit" />
+    <MESSAGE value="Adjusted Channels to long" />
+    <MESSAGE value="Adjusted long type for travel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted long type for travel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

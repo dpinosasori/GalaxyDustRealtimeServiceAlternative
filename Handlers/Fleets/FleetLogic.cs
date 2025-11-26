@@ -26,7 +26,7 @@ namespace GalaxyDustRealtimeService.Handlers.Fleets
             public object EnemyType { get; set; }
         }
 
-        public static async Task<FleetJourneyResult> ExecuteJourneyLogic(GalaxyDustApiTravel travel, GalaxydustContext db)
+        public static async Task<FleetJourneyResult?> ExecuteJourneyLogic(GalaxyDustApiTravel travel, GalaxydustContext db)
         {
             // 1. Cargar Datos Auxiliares (Multiplicadores)
             var attackMultipliers = await db.GalaxyDustApiAttackmultipliers
@@ -40,9 +40,7 @@ namespace GalaxyDustRealtimeService.Handlers.Fleets
                     { "Plasma", f.Plasma ?? 1.0 }, { "Ion", f.Ion ?? 1.0 },
                     { "Graviton", f.Graviton ?? 1.0 }
                 });
-
-            // 2. Obtener la Data del Viaje (Naves involucradas)
-            // Asumimos que TravelData tiene los IDs guardados como Array o JSON en Postgres
+            
             var travelData = await db.GalaxyDustApiTraveldata.FirstOrDefaultAsync(td => td.TravelId == travel.Id);
             if (travelData == null) return null;
             
