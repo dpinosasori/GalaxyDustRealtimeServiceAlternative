@@ -33,7 +33,7 @@ public class FlightControlService(
             using var scope = services.CreateScope();
             var db = scope.ServiceProvider.GetRequiredService<GalaxydustContext>();
             
-            var travel = await db.GalaxyDustApiTravels.FindAsync(travelId);
+            var travel = await db.GalaxyDustApiTravels.FindAsync((int)travelId);
             if (travel == null)
             {
                 logger.LogError($"❌ [WORKER] Viaje {travelId} no encontrado en DB.");
