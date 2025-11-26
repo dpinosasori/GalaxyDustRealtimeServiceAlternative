@@ -12,9 +12,9 @@ public class FlightControlService : BackgroundService
     private readonly IHubContext<TravelHub> _hubContext;
     
     // Cola de viajes pendientes (reemplazo de Redis/Celery queue)
-    private readonly Channel<Guid> _travelQueue; 
+    private readonly Channel<long> _travelQueue; 
 
-    public FlightControlService(IServiceProvider services, IHubContext<TravelHub> hub, Channel<Guid> queue)
+    public FlightControlService(IServiceProvider services, IHubContext<TravelHub> hub, Channel<long> queue)
     {
         _services = services;
         _hubContext = hub;
@@ -31,7 +31,7 @@ public class FlightControlService : BackgroundService
         }
     }
 
-    private async Task ProcessTravelAsync(Guid travelId)
+    private async Task ProcessTravelAsync(long travelId)
     {
         using (var scope = _services.CreateScope())
         {
