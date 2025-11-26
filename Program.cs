@@ -13,7 +13,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<GalaxydustContext>(options =>
     options.UseNpgsql(connectionString));
-builder.Services.AddSingleton(Channel.CreateUnbounded<Guid>());
+builder.Services.AddSingleton(Channel.CreateUnbounded<long>());
 builder.Services.AddHostedService<FlightControlService>();
 builder.Services.AddSignalR();
 
