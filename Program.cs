@@ -35,7 +35,8 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(keyBytes),
         ValidateIssuer = false,
         ValidateAudience = false,
-        ValidateLifetime = true
+        ValidateLifetime = true,
+        NameClaimType = "user_id"
     };
     
     options.Events = new JwtBearerEvents
