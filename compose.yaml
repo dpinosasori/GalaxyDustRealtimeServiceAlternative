@@ -1,0 +1,7 @@
+﻿services:
+  galaxydustrealtimeservice:
+    image: galaxydustrealtimeservice
+    build:
+      context: .
+      dockerfile: Dockerfile
+
