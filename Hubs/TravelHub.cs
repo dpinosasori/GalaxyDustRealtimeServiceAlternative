@@ -13,7 +13,11 @@ public class TravelHub(ILogger<TravelHub> logger) : Hub
 
         if (string.IsNullOrEmpty(userId))
         {
-            logger.LogWarning($"⚠️ [HUB] Usuario conectado sin ID (Token inválido o claim incorrecto). ConnectionId: {connectionId}");
+            // Debugging: Ver qué claims llegaron realmente
+            var claims = Context.User?.Claims.Select(c => $"{c.Type}: {c.Value}");
+            var claimsString = string.Join(", ", claims ?? Array.Empty<string>());
+            
+            logger.LogWarning($"⚠️ [HUB] Usuario sin ID. Claims recibidos: [{claimsString}]");
         }
         else
         {

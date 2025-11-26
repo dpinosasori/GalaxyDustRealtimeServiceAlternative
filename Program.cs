@@ -1,3 +1,4 @@
+using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using System.Threading.Channels;
 using GalaxyDustRealtimeService.Hubs;
@@ -16,6 +17,8 @@ builder.Services.AddDbContext<GalaxydustContext>(options =>
 builder.Services.AddSingleton(Channel.CreateUnbounded<long>());
 builder.Services.AddHostedService<FlightControlService>();
 builder.Services.AddSignalR();
+
+JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
 var jwtKey = builder.Configuration["Jwt:Key"] ?? throw new InvalidOperationException("JWT Key is missing");
 var keyBytes = Encoding.UTF8.GetBytes(jwtKey);
