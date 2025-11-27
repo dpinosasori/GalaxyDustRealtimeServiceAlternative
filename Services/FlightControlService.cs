@@ -43,7 +43,7 @@ public class FlightControlService(
         // 1. Buscar viajes activos (FLYING o RETURNING)
         // No hacemos Include aquí, lo haremos dentro de FleetLogic de forma optimizada
         var activeTravels = await db.GalaxyDustApiTravels
-            .Where(t => t.Status == "FLYING" || t.Status == "RETURNING")
+            .Where(t => t.Status == "FLYING" || t.Status == "RETURNING" || t.Status == "DEPARTING")
             .ToListAsync(ct);
 
         if (!activeTravels.Any()) return;
@@ -58,7 +58,7 @@ public class FlightControlService(
             var groupName = $"user_{userId}_travel";
 
             // 3. Verificar si llegó a destino
-            if (updateDto.RemainingMinutes <= 0 && travel.Status == "FLYING")
+            if (updateDto.RemainingMinutes <= 0 && travel.Status == "DEPARTING")
             {
                 logger.LogInformation($"⚔️ [FLIGHT CONTROL] Viaje {travel.Id} arribando a destino. Ejecutando lógica de encuentro.");
                     
