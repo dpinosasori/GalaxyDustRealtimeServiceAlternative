@@ -6,6 +6,9 @@ namespace GalaxyDustRealtimeService.Hubs;
 [Authorize]
 public class TravelHub(ILogger<TravelHub> logger) : Hub
 {
+    public const string EVENT_TRAVEL_UPDATE = "TravelUpdate";
+    public const string EVENT_NOTIFICATION = "Notification";
+    
     public override async Task OnConnectedAsync()
     {
         var userId = Context.User?.FindFirst("user_id")?.Value; 

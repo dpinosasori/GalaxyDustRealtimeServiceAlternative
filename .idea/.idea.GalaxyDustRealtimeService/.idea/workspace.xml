@@ -9,8 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b00b29f1-af8e-4450-a214-01b6585af6f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Models/DataTransfers/TravelDataTransfer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Handlers/Fleets/FleetLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Handlers/Fleets/FleetLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hubs/TravelHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hubs/TravelHub.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/FlightControlService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/FlightControlService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +148,7 @@
       <updated>1764162916168</updated>
       <workItem from="1764162917274" duration="7666000" />
       <workItem from="1764172589287" duration="1595000" />
-      <workItem from="1764175043543" duration="17116000" />
+      <workItem from="1764175043543" duration="20452000" />
     </task>
     <task id="LOCAL-00001" summary="Added all models from PGSQL">
       <option name="closed" value="true" />
@@ -239,7 +238,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764186259742</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Adjusted FleetLogic.cs">
+      <option name="closed" value="true" />
+      <created>1764219728400</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1764219728400</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Adjusted ticks logic with travel type">
+      <option name="closed" value="true" />
+      <created>1764220635414</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1764220635415</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +275,9 @@
     <MESSAGE value="Adjusted claims JWT" />
     <MESSAGE value="Adjusted and cleaned JWT claims handling" />
     <MESSAGE value="Use strict user identifier retrieval" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use strict user identifier retrieval" />
+    <MESSAGE value="Adjusted FleetLogic.cs" />
+    <MESSAGE value="Adjusted ticks logic with travel type" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted ticks logic with travel type" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
