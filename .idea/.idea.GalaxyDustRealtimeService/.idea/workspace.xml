@@ -9,7 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b00b29f1-af8e-4450-a214-01b6585af6f3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GalaxyDustRealtimeService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GalaxyDustRealtimeService/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/DataTransfers/TravelDataTransfer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Handlers/Fleets/FleetLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Handlers/Fleets/FleetLogic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/FlightControlService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/FlightControlService.cs" afterDir="false" />
     </list>
@@ -29,8 +29,8 @@
     <setting file="file://$PROJECT_DIR$/Controllers/TravelController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Handlers/Fleets/FleetLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hubs/TravelHub.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/DataTransfers/TravelDataTransfer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/GalaxydustContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Empresarial/Sasori/GalaxyDustRealtimeServiceAlternative/Models/GalaxydustContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/FlightControlService.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -149,7 +149,7 @@
       <updated>1764162916168</updated>
       <workItem from="1764162917274" duration="7666000" />
       <workItem from="1764172589287" duration="1595000" />
-      <workItem from="1764175043543" duration="3426000" />
+      <workItem from="1764175043543" duration="17116000" />
     </task>
     <task id="LOCAL-00001" summary="Added all models from PGSQL">
       <option name="closed" value="true" />
@@ -199,7 +199,47 @@
       <option name="project" value="LOCAL" />
       <updated>1764180285042</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added logger">
+      <option name="closed" value="true" />
+      <created>1764182364716</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1764182364716</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Adjusted parse long to int for compatibility">
+      <option name="closed" value="true" />
+      <created>1764183037516</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1764183037516</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Adjusted claims JWT">
+      <option name="closed" value="true" />
+      <created>1764184405112</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1764184405112</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Adjusted and cleaned JWT claims handling">
+      <option name="closed" value="true" />
+      <created>1764185316668</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1764185316668</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Use strict user identifier retrieval">
+      <option name="closed" value="true" />
+      <created>1764186259742</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1764186259742</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +255,12 @@
     <MESSAGE value="Adjusted commit" />
     <MESSAGE value="Adjusted Channels to long" />
     <MESSAGE value="Adjusted long type for travel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted long type for travel" />
+    <MESSAGE value="Added logger" />
+    <MESSAGE value="Adjusted parse long to int for compatibility" />
+    <MESSAGE value="Adjusted claims JWT" />
+    <MESSAGE value="Adjusted and cleaned JWT claims handling" />
+    <MESSAGE value="Use strict user identifier retrieval" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use strict user identifier retrieval" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
