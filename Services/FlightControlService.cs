@@ -39,7 +39,7 @@ public class FlightControlService(
         var db = scope.ServiceProvider.GetRequiredService<GalaxydustContext>();
         
         var activeTravels = await db.GalaxyDustApiTravels
-            .Where(t => t.Status == "FLYING" || t.Status == "RETURNING")
+            .Where(t => t.Status == "DEPARTING" || t.Status == "RETURNING")
             .ToListAsync(ct);
 
         if (!activeTravels.Any()) return;
